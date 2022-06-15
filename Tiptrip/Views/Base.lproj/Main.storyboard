@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d3m-YL-IzK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WeatherViewController-->
+        <scene sceneID="MZ1-1Q-Ekh">
+            <objects>
+                <viewController title="weatherViewController" id="t90-r6-Pwm" userLabel="WeatherViewController" customClass="WeatherViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6S-7L-DvN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cqo-eM-z9K" userLabel="WeatherStackView">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place to be" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rGI-gn-pLV">
+                                        <rect key="frame" x="20" y="0.0" width="200" height="161.5"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOT-m3-cco">
+                                        <rect key="frame" x="98" y="165.5" width="44" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="th1-fY-UaY" userLabel="climatConditions">
+                                        <rect key="frame" x="95" y="189.5" width="50" height="50.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="rRe-6e-Tfr"/>
+                                            <constraint firstAttribute="height" constant="50" id="up1-v2-dTP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rGI-gn-pLV" firstAttribute="leading" secondItem="cqo-eM-z9K" secondAttribute="leading" constant="20" id="594-Hu-elE"/>
+                                    <constraint firstAttribute="width" constant="240" id="Cik-Q7-CBW"/>
+                                    <constraint firstAttribute="height" constant="240" id="T1i-tA-sOv"/>
+                                    <constraint firstAttribute="trailing" secondItem="rGI-gn-pLV" secondAttribute="trailing" constant="20" id="dXx-V0-zBB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ple-jG-EGf"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cqo-eM-z9K" firstAttribute="centerY" secondItem="B6S-7L-DvN" secondAttribute="centerY" id="XJV-8d-ldA"/>
+                            <constraint firstItem="cqo-eM-z9K" firstAttribute="centerX" secondItem="B6S-7L-DvN" secondAttribute="centerX" id="ddP-zI-Re9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.rain" catalog="system" selectedImage="cloud.sun.rain" id="MDE-Bd-BAN"/>
+                    <connections>
+                        <outlet property="climatConditions" destination="yOT-m3-cco" id="Jim-yD-UJ5"/>
+                        <outlet property="climatIcon" destination="th1-fY-UaY" id="QxU-6x-VRd"/>
+                        <outlet property="textFieldPosition" destination="rGI-gn-pLV" id="eJF-28-nZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeM-MQ-HSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942" y="-644"/>
+        </scene>
+        <!--Currency-->
+        <scene sceneID="Ft0-Nl-umW">
+            <objects>
+                <viewController id="kE0-nX-8fR" customClass="CurrencyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdC-lP-GAB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="avh-Ga-3c7" userLabel="ChangeStackView">
+                                <rect key="frame" x="13" y="92" width="388.5" height="713"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-Nb-GIQ" userLabel="ResultStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="388.5" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpg-uB-zHd" userLabel="ResultLabel">
+                                                <rect key="frame" x="0.0" y="98" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJ3-NV-tzO" userLabel="resultDevisePickerView">
+                                                <rect key="frame" x="68.5" y="0.0" width="320" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yJ3-NV-tzO" firstAttribute="top" secondItem="RrJ-Nb-GIQ" secondAttribute="top" id="mbQ-P9-V3L"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hee-Py-p07" userLabel="ChangeButton">
+                                        <rect key="frame" x="144.5" y="341" width="100" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" title="Change"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="W8S-F7-OO0" userLabel="EntryStackView">
+                                        <rect key="frame" x="12.5" y="497" width="364" height="216"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="he2-N2-b8F" userLabel="EntryLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="216"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XP7-vx-gIL" userLabel="EntryCurrencyPickerView">
+                                                <rect key="frame" x="44" y="0.0" width="320" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AQ5-s6-zg9"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollarsign.circle" catalog="system" id="RGz-Yr-rEk"/>
+                    <connections>
+                        <outlet property="changeCurrencyButton" destination="hee-Py-p07" id="qv9-jk-BrW"/>
+                        <outlet property="currencyDevicePicker" destination="yJ3-NV-tzO" id="ek3-g4-LTq"/>
+                        <outlet property="currencyResult" destination="Rpg-uB-zHd" id="iVE-zv-1Qz"/>
+                        <outlet property="currencyResultDevicePicker" destination="yJ3-NV-tzO" id="J0j-ZI-sxi"/>
+                        <outlet property="re" destination="yJ3-NV-tzO" id="D60-pR-dcL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRP-XZ-Cn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942.0289855072465" y="25.446428571428569"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="g6m-hu-cp3">
+            <objects>
+                <viewController id="PZL-dY-KPv" customClass="SettingsViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Flv-1n-PXe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="r18-y2-xac"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="gBR-Dc-MVX">
+                        <color key="badgeColor" name="AccentColor"/>
+                        <imageReference key="selectedImage" image="gearshape" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahl-FO-xxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2975" y="1477"/>
+        </scene>
+        <!--TranslateViewController-->
+        <scene sceneID="edb-7M-deA">
+            <objects>
+                <viewController id="z9U-bH-RZT" userLabel="TranslateViewController" customClass="TranslateViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueJ-sE-W1A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-yd-IGt" userLabel="TranslateStackView">
+                                <rect key="frame" x="20" y="44" width="374" height="749"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ENTRY" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-WU-sVq">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="613"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="RESULT" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-s4-a74" userLabel="ResultTextView">
+                                        <rect key="frame" x="0.0" y="621" width="374" height="128"/>
+                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="MdJ-WU-sVq" firstAttribute="leading" secondItem="SbC-s4-a74" secondAttribute="leading" id="0HH-ab-sJ7"/>
+                                    <constraint firstItem="SbC-s4-a74" firstAttribute="leading" secondItem="mQD-yd-IGt" secondAttribute="leading" id="J2u-Qy-cjK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fs3-we-NOP"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mQD-yd-IGt" firstAttribute="top" secondItem="fs3-we-NOP" secondAttribute="top" id="0Fu-XL-oFV"/>
+                            <constraint firstItem="mQD-yd-IGt" firstAttribute="centerX" secondItem="ueJ-sE-W1A" secondAttribute="centerX" id="1PK-rE-jia"/>
+                            <constraint firstItem="fs3-we-NOP" firstAttribute="bottom" secondItem="mQD-yd-IGt" secondAttribute="bottom" constant="20" id="3Lf-7R-AkM"/>
+                            <constraint firstItem="mQD-yd-IGt" firstAttribute="top" secondItem="fs3-we-NOP" secondAttribute="top" id="9zX-la-ShE"/>
+                            <constraint firstItem="mQD-yd-IGt" firstAttribute="leading" secondItem="fs3-we-NOP" secondAttribute="leading" constant="20" id="Dhh-ta-Ojb"/>
+                            <constraint firstItem="mQD-yd-IGt" firstAttribute="top" secondItem="fs3-we-NOP" secondAttribute="top" id="ZId-J4-iKB"/>
+                            <constraint firstItem="fs3-we-NOP" firstAttribute="trailing" secondItem="mQD-yd-IGt" secondAttribute="trailing" constant="20" id="aLa-QB-9g4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Translate" image="character.book.closed.ko" catalog="system" id="2eK-5h-9Fd"/>
+                    <connections>
+                        <outlet property="translateEntry" destination="MdJ-WU-sVq" id="u26-ea-UBq"/>
+                        <outlet property="translateResult" destination="SbC-s4-a74" id="RfA-Ht-cZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Yc-5L-FPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uY4-Y0-jsZ"/>
+            </objects>
+            <point key="canvasLocation" x="2942.0289855072465" y="683.70535714285711"/>
+        </scene>
+        <!--Nav Barview Controler View Controller-->
+        <scene sceneID="YGm-U2-EhA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="d3m-YL-IzK" customClass="NavBarviewControlerViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" alpha="0.5" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="character.book.closed.ko" catalog="system" id="Oi6-ie-6zF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="t90-r6-Pwm" kind="relationship" relationship="viewControllers" id="tOb-5b-BSS"/>
+                        <segue destination="kE0-nX-8fR" kind="relationship" relationship="viewControllers" id="WSL-mo-GTi"/>
+                        <segue destination="z9U-bH-RZT" kind="relationship" relationship="viewControllers" id="hdU-Ah-IOm"/>
+                        <segue destination="PZL-dY-KPv" kind="relationship" relationship="viewControllers" id="uRP-PK-SjP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I18-r4-W21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" width="128" height="93"/>
+        <image name="character.book.closed.ko" catalog="system" width="115" height="128"/>
+        <image name="cloud.sun.rain" catalog="system" width="32" height="32"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="sun.max" catalog="system" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

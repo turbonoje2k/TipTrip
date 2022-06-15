@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lever-du-soleil.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
