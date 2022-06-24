@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,6 +22,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place to be" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rGI-gn-pLV">
                                         <rect key="frame" x="20" y="0.0" width="200" height="161.5"/>
+                                        <gestureRecognizers/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -51,10 +51,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ple-jG-EGf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="cqo-eM-z9K" firstAttribute="centerY" secondItem="B6S-7L-DvN" secondAttribute="centerY" id="XJV-8d-ldA"/>
                             <constraint firstItem="cqo-eM-z9K" firstAttribute="centerX" secondItem="B6S-7L-DvN" secondAttribute="centerX" id="ddP-zI-Re9"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EAA-BM-U4x" appends="YES" id="nZo-N4-7ZT"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.rain" catalog="system" selectedImage="cloud.sun.rain" id="MDE-Bd-BAN"/>
                     <connections>
@@ -64,13 +68,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BeM-MQ-HSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EAA-BM-U4x">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="t90-r6-Pwm" id="ie8-G8-f6Z"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2942" y="-644"/>
         </scene>
         <!--Currency-->
         <scene sceneID="Ft0-Nl-umW">
             <objects>
-                <viewController id="kE0-nX-8fR" customClass="CurrencyViewController" sceneMemberID="viewController">
+                <viewController id="kE0-nX-8fR" customClass="CurrencyViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdC-lP-GAB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,8 +96,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJ3-NV-tzO" userLabel="resultDevisePickerView">
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJ3-NV-tzO" userLabel="resultDevisePickerView">
                                                 <rect key="frame" x="68.5" y="0.0" width="320" height="216"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="kE0-nX-8fR" id="400-23-oVh"/>
+                                                    <outlet property="delegate" destination="kE0-nX-8fR" id="hog-6g-hUs"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                         <constraints>
@@ -107,13 +120,24 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="216"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="kE0-nX-8fR" id="xJ7-OU-e5Z"/>
+                                                </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XP7-vx-gIL" userLabel="EntryCurrencyPickerView">
                                                 <rect key="frame" x="44" y="0.0" width="320" height="216"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="kE0-nX-8fR" id="2Ex-EE-MLf"/>
+                                                    <outlet property="delegate" destination="kE0-nX-8fR" id="R4x-8L-xgA"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ukg-g7-NYZ" appends="YES" id="xtt-rE-gwE"/>
+                                </connections>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AQ5-s6-zg9"/>
@@ -121,35 +145,21 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Currency" image="dollarsign.circle" catalog="system" id="RGz-Yr-rEk"/>
                     <connections>
-                        <outlet property="changeCurrencyButton" destination="hee-Py-p07" id="qv9-jk-BrW"/>
+                        <outlet property="changeCurrencyButton" destination="hee-Py-p07" id="ZZu-s7-gxN"/>
                         <outlet property="currencyDevicePicker" destination="yJ3-NV-tzO" id="ek3-g4-LTq"/>
                         <outlet property="currencyResult" destination="Rpg-uB-zHd" id="iVE-zv-1Qz"/>
                         <outlet property="currencyResultDevicePicker" destination="yJ3-NV-tzO" id="J0j-ZI-sxi"/>
-                        <outlet property="re" destination="yJ3-NV-tzO" id="D60-pR-dcL"/>
+                        <outlet property="currencyTextField" destination="he2-N2-b8F" id="SXj-bI-nj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRP-XZ-Cn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ukg-g7-NYZ">
+                    <connections>
+                        <action selector="disMissKeyboard:" destination="kE0-nX-8fR" id="GvH-37-Uz1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2942.0289855072465" y="25.446428571428569"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="g6m-hu-cp3">
-            <objects>
-                <viewController id="PZL-dY-KPv" customClass="SettingsViewController" customModule="Tiptrip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Flv-1n-PXe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="r18-y2-xac"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="gBR-Dc-MVX">
-                        <color key="badgeColor" name="AccentColor"/>
-                        <imageReference key="selectedImage" image="gearshape" catalog="system" symbolScale="default"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ahl-FO-xxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2975" y="1477"/>
         </scene>
         <!--TranslateViewController-->
         <scene sceneID="edb-7M-deA">
@@ -222,7 +232,6 @@
                         <segue destination="t90-r6-Pwm" kind="relationship" relationship="viewControllers" id="tOb-5b-BSS"/>
                         <segue destination="kE0-nX-8fR" kind="relationship" relationship="viewControllers" id="WSL-mo-GTi"/>
                         <segue destination="z9U-bH-RZT" kind="relationship" relationship="viewControllers" id="hdU-Ah-IOm"/>
-                        <segue destination="PZL-dY-KPv" kind="relationship" relationship="viewControllers" id="uRP-PK-SjP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I18-r4-W21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -233,16 +242,12 @@
     <resources>
         <image name="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" width="128" height="93"/>
         <image name="character.book.closed.ko" catalog="system" width="115" height="128"/>
-        <image name="cloud.sun.rain" catalog="system" width="32" height="32"/>
+        <image name="cloud.sun.rain" catalog="system" width="128" height="128"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="sun.max" catalog="system" width="32" height="32"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -10,7 +10,7 @@ import Foundation
 class WeatherModel {
   // API Key à placer dans dossier secret
   let token = "14e872fac1b9bbf044a4687056a58472"
-  let apiAdress = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
+  let url = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
   
 // array + API to convert town in LonLat code key : town: def : LonLat
   let townList = ["Shanghai", "Delhi", "Tokyo-Yokohama", "São Paulo", "Mexico", "Dacca", "Le Caire", "Beijing", "Bombay", "Osaka", "New York", "Karachi", "Chongqing", "Istanbul", "Buenos Aires", "Calcutta", "Kinshasa", "Lagos", "Manila", "Tianjin", "Canton", "Rio de Janeiro", "Lahore", "Bangalore", "Moscou", "Shenzhen", "Bogota", "Jakarta", "Lima", "Paris", "Bangkok", "Hyderabad", "Séoul", "Chengdu", "Téhéran", "Nanjing", "Londres", "Hô Chi Minh", "Luanda", "Wuhan", "Xi'an", "Hong Kong", "Bagdad", "Hanoï", "Madrid", "Santiago", "Ahmedabad", "Riyad", "Singapour", "Saint-Pétersbourg", "Abidjan", "Rangoun", "Sydney"]

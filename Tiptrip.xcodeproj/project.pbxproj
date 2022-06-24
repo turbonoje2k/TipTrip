@@ -21,6 +21,7 @@
 		EA7B445F282A631100B1DDF2 /* TiptripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B445E282A631100B1DDF2 /* TiptripUITests.swift */; };
 		EA7B4461282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B4460282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift */; };
 		EA9C9AF728451FF800ABECDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C9AF628451FF800ABECDA /* SettingsViewController.swift */; };
+		EAA0D5F92865E9C70036CF5A /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */; };
 		EAC2BFA2282A6E050088442E /* NavBarviewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA1282A6E050088442E /* NavBarviewControlerViewController.swift */; };
 		EAC2BFA8282BEAF20088442E /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA7282BEAF20088442E /* WeatherModel.swift */; };
 		EAC2BFAA282BEB770088442E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA9282BEB770088442E /* WeatherService.swift */; };
@@ -62,6 +63,7 @@
 		EA7B445E282A631100B1DDF2 /* TiptripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptripUITests.swift; sourceTree = "<group>"; };
 		EA7B4460282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptripUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA9C9AF628451FF800ABECDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		EAC2BFA1282A6E050088442E /* NavBarviewControlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarviewControlerViewController.swift; sourceTree = "<group>"; };
 		EAC2BFA7282BEAF20088442E /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		EAC2BFA9282BEB770088442E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC2BFA7282BEAF20088442E /* WeatherModel.swift */,
+				EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				EA7B4442282A630F00B1DDF2 /* ViewController.swift in Sources */,
 				EA7B443E282A630F00B1DDF2 /* AppDelegate.swift in Sources */,
 				EAC2BFA8282BEAF20088442E /* WeatherModel.swift in Sources */,
+				EAA0D5F92865E9C70036CF5A /* CurrencyModel.swift in Sources */,
 				EA7B4440282A630F00B1DDF2 /* SceneDelegate.swift in Sources */,
 				AF313FAD282BA2A500BAD5B8 /* DecoderGeneric.swift in Sources */,
 				EAC2BFA2282A6E050088442E /* NavBarviewControlerViewController.swift in Sources */,
