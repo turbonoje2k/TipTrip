@@ -14,31 +14,53 @@ class CurrencyViewController: UIViewController {
   @IBOutlet weak var changeCurrencyButton: UIButton!
   @IBOutlet weak var currencyResultDevicePicker: UIPickerView!
   @IBOutlet weak var currencyTextField: UITextField!
+  @IBOutlet var disMissKeyboard: UITapGestureRecognizer!
 
-  @IBAction func disMissKeyboard(_ sender: Any) {
+  @IBAction func dismissKeyboard(_ sender: Any) {
     currencyTextField.resignFirstResponder()
-//    currencyTextField.keyboardType = .numbersAndPunctuation
   }
 
   var pickerData: [String] = .init()
-  //  var pickerData2: [String] = []
-  //  var pickerDarta3 = [String]()
+  let apiKey = Bundle.main.object(forInfoDictionaryKey: "currencyAPIKey") as? String
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    //connect the data
+
+    guard let key = apiKey, !key.isEmpty else {
+      print("API Key does not exist")
+      return
+    }
+    print("REST API KEY:", key)
+
     pickerData = ["$", "€", "£", "¥", "₽", "₨"]
+    self.hideKeyboardWhenTappedAround()
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    currencyTextField.keyboardType = .numbersAndPunctuation
   }
 
+  @objc func keyboardWillShow(notification: NSNotification) {
+    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+      if self.view.frame.origin.y == 0 {
+        self.view.frame.origin.y -= keyboardSize.height
+      }
+    }
+  }
+
+  @objc func keyboardWillHide(notification: NSNotification) {
+    if self.view.frame.origin.y != 0 {
+      self.view.frame.origin.y = 0
+    }
+  }
 }
 
 //MARK: Extensions
-extension CurrencyViewController : UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate  {
+extension CurrencyViewController : UIPickerViewDelegate, UIPickerViewDataSource  {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  /// return of numberOfComponents (headerDoc
+
   public func numberOfComponents(in pickerView: UIPickerView) -> Int {
     1
   }
@@ -49,10 +71,5 @@ extension CurrencyViewController : UIPickerViewDelegate, UIPickerViewDataSource,
 
   public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     pickerData[row]
-  }
-
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
-    return true
   }
 }

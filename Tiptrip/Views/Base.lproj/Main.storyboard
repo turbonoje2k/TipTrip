@@ -136,7 +136,7 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ukg-g7-NYZ" appends="YES" id="xtt-rE-gwE"/>
+                                    <outletCollection property="gestureRecognizers" destination="jPr-Gd-Tbw" appends="YES" id="vPh-Cf-pPi"/>
                                 </connections>
                             </stackView>
                         </subviews>
@@ -149,13 +149,15 @@
                         <outlet property="currencyDevicePicker" destination="yJ3-NV-tzO" id="ek3-g4-LTq"/>
                         <outlet property="currencyResult" destination="Rpg-uB-zHd" id="iVE-zv-1Qz"/>
                         <outlet property="currencyResultDevicePicker" destination="yJ3-NV-tzO" id="J0j-ZI-sxi"/>
-                        <outlet property="currencyTextField" destination="he2-N2-b8F" id="SXj-bI-nj2"/>
+                        <outlet property="currencyTextField" destination="he2-N2-b8F" id="Ugn-md-wKr"/>
+                        <outlet property="disMissKeyboard" destination="jPr-Gd-Tbw" id="h3G-CC-pTF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRP-XZ-Cn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ukg-g7-NYZ">
+                <tapGestureRecognizer id="jPr-Gd-Tbw">
                     <connections>
-                        <action selector="disMissKeyboard:" destination="kE0-nX-8fR" id="GvH-37-Uz1"/>
+                        <action selector="dismissKeyboard:" destination="kE0-nX-8fR" id="TcM-tP-fNO"/>
+                        <outlet property="delegate" destination="mdC-lP-GAB" id="u5U-Xz-JWi"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

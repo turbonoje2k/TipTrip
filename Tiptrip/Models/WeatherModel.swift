@@ -8,8 +8,6 @@
 import Foundation
 
 class WeatherModel {
-  // API Key à placer dans dossier secret
-  let token = "14e872fac1b9bbf044a4687056a58472"
   let url = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
   
 // array + API to convert town in LonLat code key : town: def : LonLat

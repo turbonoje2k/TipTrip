@@ -21,7 +21,9 @@
 		EA7B445F282A631100B1DDF2 /* TiptripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B445E282A631100B1DDF2 /* TiptripUITests.swift */; };
 		EA7B4461282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B4460282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift */; };
 		EA9C9AF728451FF800ABECDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C9AF628451FF800ABECDA /* SettingsViewController.swift */; };
+		EA9E09182866179300173841 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E09172866179300173841 /* UIViewControllerExtension.swift */; };
 		EAA0D5F92865E9C70036CF5A /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */; };
+		EAA0D5FB2865F2190036CF5A /* translateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0D5FA2865F2190036CF5A /* translateModel.swift */; };
 		EAC2BFA2282A6E050088442E /* NavBarviewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA1282A6E050088442E /* NavBarviewControlerViewController.swift */; };
 		EAC2BFA8282BEAF20088442E /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA7282BEAF20088442E /* WeatherModel.swift */; };
 		EAC2BFAA282BEB770088442E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2BFA9282BEB770088442E /* WeatherService.swift */; };
@@ -63,7 +65,10 @@
 		EA7B445E282A631100B1DDF2 /* TiptripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptripUITests.swift; sourceTree = "<group>"; };
 		EA7B4460282A631100B1DDF2 /* TiptripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptripUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA9C9AF628451FF800ABECDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EA9E09172866179300173841 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		EA9E091928698C2300173841 /* SecretAPIKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SecretAPIKeys.xcconfig; sourceTree = "<group>"; };
 		EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		EAA0D5FA2865F2190036CF5A /* translateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = translateModel.swift; sourceTree = "<group>"; };
 		EAC2BFA1282A6E050088442E /* NavBarviewControlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarviewControlerViewController.swift; sourceTree = "<group>"; };
 		EAC2BFA7282BEAF20088442E /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		EAC2BFA9282BEB770088442E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 		EA7B4431282A630F00B1DDF2 = {
 			isa = PBXGroup;
 			children = (
+				EA9E091928698C2300173841 /* SecretAPIKeys.xcconfig */,
 				EA7B443C282A630F00B1DDF2 /* Tiptrip */,
 				EA7B4453282A631100B1DDF2 /* TiptripTests */,
 				EA7B445D282A631100B1DDF2 /* TiptripUITests */,
@@ -163,6 +169,7 @@
 				EA48508528354DD200A041AF /* CurrencyViewController.swift */,
 				EA48508728354DE900A041AF /* TranslateViewController.swift */,
 				EA9C9AF628451FF800ABECDA /* SettingsViewController.swift */,
+				EA9E09172866179300173841 /* UIViewControllerExtension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 			children = (
 				EAC2BFA7282BEAF20088442E /* WeatherModel.swift */,
 				EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */,
+				EAA0D5FA2865F2190036CF5A /* translateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 				EA48508428354DA600A041AF /* WeatherViewController.swift in Sources */,
 				EA48508628354DD200A041AF /* CurrencyViewController.swift in Sources */,
 				AF313FAF282BA2C000BAD5B8 /* NetworkManager.swift in Sources */,
+				EA9E09182866179300173841 /* UIViewControllerExtension.swift in Sources */,
 				EA48508828354DE900A041AF /* TranslateViewController.swift in Sources */,
 				EA7B4442282A630F00B1DDF2 /* ViewController.swift in Sources */,
 				EA7B443E282A630F00B1DDF2 /* AppDelegate.swift in Sources */,
@@ -328,6 +337,7 @@
 				EA7B4440282A630F00B1DDF2 /* SceneDelegate.swift in Sources */,
 				AF313FAD282BA2A500BAD5B8 /* DecoderGeneric.swift in Sources */,
 				EAC2BFA2282A6E050088442E /* NavBarviewControlerViewController.swift in Sources */,
+				EAA0D5FB2865F2190036CF5A /* translateModel.swift in Sources */,
 				EA9C9AF728451FF800ABECDA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +388,7 @@
 /* Begin XCBuildConfiguration section */
 		EA7B4462282A631100B1DDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9E091928698C2300173841 /* SecretAPIKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
