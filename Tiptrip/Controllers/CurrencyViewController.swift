@@ -19,6 +19,16 @@ class CurrencyViewController: UIViewController {
   @IBAction func dismissKeyboard(_ sender: Any) {
     currencyTextField.resignFirstResponder()
   }
+  
+  @IBAction func changeCurrencyButton(_ sender: Any) {
+    //prendre la valeur de currencyTextField + 
+    // faire la requete API
+    //renvoyer le resultat dans currencyResult
+
+    //    NetworkManager.getData()
+  }
+
+
 
   var pickerData: [String] = .init()
   let apiKey = Bundle.main.object(forInfoDictionaryKey: "currencyAPIKey") as? String

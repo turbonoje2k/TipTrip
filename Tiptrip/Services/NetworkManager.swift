@@ -6,29 +6,51 @@
 //
 
 import Foundation
+import Combine
 
 class NetworkManager < T : Decodable > {
-    
-    func getData() {
-        
-        let urlString:String = .init()
-      let url = URL(string: urlString)
-      let session = URLSession.shared
-      let dataTask = session.dataTask(with: url!) { (data, response, error) in
-        //check for errors
-        if error == nil && data != nil {
-          //parse JSON
-          let decoder = JSONDecoder()
-          do {
-            var _ = try decoder.decode(T.self, from: data!)
-          } catch {
-            debugPrint("Error in JSON parsing !")
-          }
+
+  func getData() {
+    var body:String = .init()
+    let urlString:String = .init()
+    let url = URL(string: urlString)
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: url!) { (data, response, error) in
+      //check for errors
+      if error == nil && data != nil {
+        //parse JSON
+        let decoder = JSONDecoder()
+        do {
+          var _ = try decoder.decode(T.self, from: data!)
+        } catch {
+          debugPrint("Error in JSON parsing !")
         }
       }
-        //Make the API Call
-        dataTask.resume()
     }
+    //Make the API Call
+    dataTask.resume()
+  }
+
+  func getData2() -> AnyPublisher <T> {
+    var body:String = .init()
+    let urlString:String = .init()
+    let url = URL(string: urlString)
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: url!) { (data, response, error) in
+      //check for errors
+      if error == nil && data != nil {
+        //parse JSON
+        let decoder = JSONDecoder()
+        do {
+          var _ = try decoder.decode(T.self, from: data!)
+        } catch {
+          debugPrint("Error in JSON parsing !")
+        }
+      }
+    }
+    //Make the API Call
+    dataTask.resume()
+  }
 }
 
 //static func createRequest() -> URLRequest {

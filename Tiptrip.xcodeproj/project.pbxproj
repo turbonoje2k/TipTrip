@@ -12,6 +12,7 @@
 		EA48508428354DA600A041AF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48508328354DA600A041AF /* WeatherViewController.swift */; };
 		EA48508628354DD200A041AF /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48508528354DD200A041AF /* CurrencyViewController.swift */; };
 		EA48508828354DE900A041AF /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48508728354DE900A041AF /* TranslateViewController.swift */; };
+		EA602179286CABA0004A45FF /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA602178286CABA0004A45FF /* CurrencyResponse.swift */; };
 		EA7B443E282A630F00B1DDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B443D282A630F00B1DDF2 /* AppDelegate.swift */; };
 		EA7B4440282A630F00B1DDF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B443F282A630F00B1DDF2 /* SceneDelegate.swift */; };
 		EA7B4442282A630F00B1DDF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B4441282A630F00B1DDF2 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		EA48508328354DA600A041AF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		EA48508528354DD200A041AF /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		EA48508728354DE900A041AF /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		EA602178286CABA0004A45FF /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
 		EA7B443A282A630F00B1DDF2 /* Tiptrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiptrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7B443D282A630F00B1DDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA7B443F282A630F00B1DDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				EAC2BFA7282BEAF20088442E /* WeatherModel.swift */,
 				EAA0D5F82865E9C70036CF5A /* CurrencyModel.swift */,
 				EAA0D5FA2865F2190036CF5A /* translateModel.swift */,
+				EA602178286CABA0004A45FF /* CurrencyResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				EAC2BFA8282BEAF20088442E /* WeatherModel.swift in Sources */,
 				EAA0D5F92865E9C70036CF5A /* CurrencyModel.swift in Sources */,
 				EA7B4440282A630F00B1DDF2 /* SceneDelegate.swift in Sources */,
+				EA602179286CABA0004A45FF /* CurrencyResponse.swift in Sources */,
 				AF313FAD282BA2A500BAD5B8 /* DecoderGeneric.swift in Sources */,
 				EAC2BFA2282A6E050088442E /* NavBarviewControlerViewController.swift in Sources */,
 				EAA0D5FB2865F2190036CF5A /* translateModel.swift in Sources */,

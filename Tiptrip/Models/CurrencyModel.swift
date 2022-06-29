@@ -10,4 +10,5 @@ import Foundation
 class CurrencyModel {
   let url = "https://api.apilayer.com/fixer/convert?to={to}&from={from}&amount={amount}"
   
+  
 }
